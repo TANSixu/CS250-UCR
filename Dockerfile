@@ -9,6 +9,6 @@ RUN pip install xlsxwriter pycrypto defusedxml pyyaml matplotlib
 WORKDIR /cb-multios
 COPY . ./
 
-RUN ["/bin/bash", "BITNESS=64 ./build.sh"]
+#RUN ["/bin/bash", "BITNESS=64 ./build.sh"]
 
 ENTRYPOINT "/bin/bash"
