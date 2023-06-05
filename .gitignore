@@ -252,4 +252,3 @@ target/
 _backup/
 test.cpp
 challenges/*/bin
-challenges/*/pov
