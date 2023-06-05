@@ -187,6 +187,15 @@ function(buildCB)
             buildPOV(${cb_path} ${cb_id} ${pov})
         endforeach()
     endif()
+
+    file(GLOB xmls "${cb_path}/pov/*.xml")
+    if(xmls) 
+        add_custom_command(
+            TARGET ${cb_id} POST_BUILD
+	    COMMAND ${CMAKE_COMMAND} -E copy "${cb_path}/pov/*.xml" . 
+	    COMMENT "Copying ${xmls}"
+        )
+    endif()
 endfunction(buildCB)
 
 function(buildSO)
