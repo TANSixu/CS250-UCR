@@ -32,7 +32,7 @@ THE SOFTWARE.
 #include "cgc_string.h"
 #include "cgc_ctype.h"
 
-#define INITIALIZATION_DATA 0x4347C000
+#define INITIALIZATION_DATA CGC_FLAG_PAGE_ADDRESS
 
 // authenticates from the magic page.  Returns a security ID on success, or 0 on failure
 securityIdType cgc_authenticate(char *name, unsigned int token) {

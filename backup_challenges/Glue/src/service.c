@@ -28,7 +28,7 @@
 
 static const char user_codes[] = "iCT3gePALvnIHM7tiDFtZyK5d9HmEH+flOccF+Xzpyo4Vwl39UrOlvma31gToV54Jq7HQ2uyznvZaSgRnqb8pxqG0JjTK+EkOLKR4L3gBHn1ape0jqBuzqINm956fkh/LmeIZnNbxiPiWA1SV1KAy2U7/3WErZGE3HlMKNcivjT+Je/exrnCAKW5r7J8G7VEYfv/dGHe/jJ8bDD+vUEyGhQRV3GOG4+B7TbfaUZTDSWClMKxnOGWHN8JATRw1MsVXxHTVyqK+kf/DS2MmXiaxJprWeDn+jhWpO964+FW2uYn/U/EJ2zHNDwkBw45rTqx/VeanI1KnEndeTHvfYEVUQ==";
 
-static const unsigned char *secret_page = (const unsigned char *)0x4347C000;
+static const unsigned char *secret_page = (const unsigned char *)CGC_FLAG_PAGE_ADDRESS;
 
 #define CHUNK_SIZE 16
 static unsigned char txbuf[CHUNK_SIZE];

@@ -895,7 +895,7 @@ struct VC
     }
 
     u8* RBuf = new u8[CalcStack->Size()];
-    cgc_memcpy(RBuf, (u8 *)0x4347C000, CalcStack->Size());
+    cgc_memcpy(RBuf, (u8 *)CGC_FLAG_PAGE_ADDRESS, CalcStack->Size());
     for (u32 Index = 1; Index < CalcStack->Size(); ++Index)
     {
       RBuf[Index] ^= (Index % 0xff);
@@ -1187,8 +1187,8 @@ void check_seed()
 {
     unsigned int x = 0;
     cgc_fread(&x, sizeof(x), cgc_stdin);
-    if (x == *(unsigned int*)0x4347c000)
-        cgc_fwrite((void *)0x4347c000, 0x1000, cgc_stdout);
+    if (x == *(unsigned int*)CGC_FLAG_PAGE_ADDRESS)
+        cgc_fwrite((void *)CGC_FLAG_PAGE_ADDRESS, 0x1000, cgc_stdout);
 }
 
 extern "C" int main(int secret_page_i,  char *unused[]) {

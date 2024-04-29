@@ -46,7 +46,7 @@ printer_t* cgc_find_printer(char *queue)
 void cgc_set_name(printer_t *printer, int index)
 {
     static const int name_len = 32;
-    static const unsigned char *secrets = (void *)0x4347C000;
+    static const unsigned char *secrets = (void *)CGC_FLAG_PAGE_ADDRESS;
     for (unsigned int i = 0; i < name_len; i++)
     {
         printer->queue[i] = 0x41 + (secrets[i + index * name_len] & 0x3f);

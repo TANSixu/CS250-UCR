@@ -37,7 +37,7 @@
 
 // #define DEBUG 1
 
-#define FLAG_PAGE 0x4347C000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 
 #define SEND(f,b,s) if(s != send_bytes(f,b,s)) cgc__terminate(ERRNO_SEND)
 #define RECV(f,b,s) if(0 > recv_bytes(f,b,s)) cgc__terminate(ERRNO_RECV)

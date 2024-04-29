@@ -38,7 +38,7 @@ typedef uint8_t bool;
 #define INT_MAX 0x7FFFFFFF
 
 // Things that don't change about the target VA space:
-#define FLAG_BGN 0x4347C000 // per CFE rules
+#define FLAG_BGN CGC_FLAG_PAGE_ADDRESS // per CFE rules
 #define STCK_BGN 0xbaa8b000 // per CGC kernel source
 #define STCK_END 0xbaaab000 // per CGC kernel source
 #define HEAP_BGN 0xb7fff000 // empirically for this CB

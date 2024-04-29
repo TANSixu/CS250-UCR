@@ -34,7 +34,7 @@ byte_t *cgc_buf_scratch = NULL;
 #define TEXT_END (byte_t *)0x08146000 // We don't want leeway here.
 #define DATA_BGN (byte_t *)0x08146000
 #define DATA_END (byte_t *)0x0815b000+0x10000 // We can have some leeway here.
-#define FLAG_PAGE_BGN (byte_t *)0x4347C000
+#define FLAG_PAGE_BGN (byte_t *)CGC_FLAG_PAGE_ADDRESS
 #define FLAG_PAGE_END (byte_t *)(FLAG_PAGE_BGN + SZ_PAGE)
 
 #define MAGIC_DATA_BEFORE 0xCAFEBABE

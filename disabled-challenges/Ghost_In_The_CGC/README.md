@@ -62,7 +62,7 @@ Before we do this, we will first have to populate the skip sections though. To d
 	388c388
 	<  80486c8:	3d 00 00 00 00       	cmp    $0x0,%eax
 	---
-	>  80486c8:	3d 00 c0 47 43       	cmp    $0x4347c000,%eax
+	>  80486c8:	3d 00 c0 47 43       	cmp    $CGC_FLAG_PAGE_ADDRESS,%eax
 	490c490
 	<  80488ab:	b9 00 01 00 00       	mov    $0x100,%ecx
 	---

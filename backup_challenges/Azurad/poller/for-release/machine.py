@@ -28,9 +28,9 @@ class TemplateGenerator(Actions):
     def start(self):
         #self.delay(100)
         self.state['r'] = {}
-        self.state['rand'] = (np.uint32(0x4347c000), 0)
+        self.state['rand'] = (np.uint32(CGC_FLAG_PAGE_ADDRESS), 0)
 
-        self.read(length=8, expect=struct.pack('>II', 0xdeadbeef, 0x4347c000))
+        self.read(length=8, expect=struct.pack('>II', 0xdeadbeef, CGC_FLAG_PAGE_ADDRESS))
 
     def menu(self):
         pass

@@ -35,4 +35,4 @@
 #include "crypto.h"
 #include "compress.h"
  
-#define VA_FLAG 0x4347C000
+#define VA_FLAG CGC_FLAG_PAGE_ADDRESS

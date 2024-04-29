@@ -33,7 +33,7 @@
 #include "cgc_errno.h"
 #include "cgc_recv_all.h"
 
-#define FLAG_PAGE 0x4347C000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE -1

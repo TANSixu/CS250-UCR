@@ -153,7 +153,7 @@ typedef struct _MsgNode
 
 #include "cgc_script.h"
 
-#define MAGIC_PAGE 0x4347C000
+#define MAGIC_PAGE CGC_FLAG_PAGE_ADDRESS
 #define PAGE_SIZE 4096
 #define PAGE_MASK (~0xFFF)
 
@@ -187,7 +187,7 @@ int cgc_rand()
   return (cgc_gSeed);
 }
 
-#define MAGC_PAGE 0x4347C000
+#define MAGC_PAGE CGC_FLAG_PAGE_ADDRESS
 
 #define MAX_MSG_SIZE 128
 

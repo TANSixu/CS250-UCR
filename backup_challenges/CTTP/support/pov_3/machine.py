@@ -38,7 +38,7 @@ SUBMITOK = "Oh, sure. Let the robot do all the work.\x00"
 DELETEOK = "Hopes: deleted.\x00"
 NOTIMPLEMENTED = "You want me to do *two* things?!\x00"
 
-INFO = 0x4347C000
+INFO = CGC_FLAG_PAGE_ADDRESS
 WARN = 0x4347C001
 ERROR = 0x4347C002
 

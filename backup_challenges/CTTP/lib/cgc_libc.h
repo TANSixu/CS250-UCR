@@ -153,7 +153,7 @@ typedef enum {
 extern uint32_t cgc___hcookie[3];
 
 #define PAGE_SIZE 4096
-#define FLAG_PAGE 0x4347C000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 typedef struct heap_chunk heap_chunk_t;
 
 struct heap_chunk {

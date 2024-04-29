@@ -26,7 +26,7 @@ THE SOFTWARE.
 #ifndef LIBC_H
 #define LIBC_H
 
-#define FLAG_PAGE 0x4347c000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 
 int cgc_receive_all(char *buf, int length);
 int cgc_receive_all_fd(int fd, char *buf, int length);

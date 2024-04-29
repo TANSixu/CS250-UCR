@@ -29,7 +29,7 @@ THE SOFTWARE.
 #include "libcgc.h"
 
 #define RAND_MAX	2147483647
-#define MAGIC_PAGE 0x4347c000
+#define MAGIC_PAGE CGC_FLAG_PAGE_ADDRESS
 
 int rand( void );
 void srand( unsigned int seed );

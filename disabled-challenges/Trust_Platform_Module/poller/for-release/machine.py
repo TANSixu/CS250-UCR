@@ -288,7 +288,7 @@ pcrNums = range(MAX_PCRS)
 
 toHexStr = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' ]
 
-MAGIC_PAGE = 0x4347C000
+MAGIC_PAGE = CGC_FLAG_PAGE_ADDRESS
 
 class TPM(Actions):
 

@@ -32,14 +32,14 @@
 #define SWAP_ROW 1
 #define SWAP_COL 2
 
-const int *secret = (const int *)0x4347C000;
-//30720 * 36744 = 0x4347C000
+const int *secret = (const int *)CGC_FLAG_PAGE_ADDRESS;
+//30720 * 36744 = CGC_FLAG_PAGE_ADDRESS
 
 unsigned int cgc_g_random_usage = 0;
 
 short *cgc_create_random_shorts()
 {
-    uint8_t *secret_page = (uint8_t *)0x4347c000;
+    uint8_t *secret_page = (uint8_t *)CGC_FLAG_PAGE_ADDRESS;
     short *prand_shorts = cgc_malloc(RANDOM_SHORTS * sizeof(short));
     if (!prand_shorts)
         return NULL;

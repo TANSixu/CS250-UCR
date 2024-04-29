@@ -35,7 +35,7 @@ THE SOFTWARE.
 extern PlantSystem cgc_Effluent;
 uint8_t cgc_SimStepCount = 0;
 
-const char *rand_page = (const char *)0x4347C000;
+const char *rand_page = (const char *)CGC_FLAG_PAGE_ADDRESS;
 
 int main(int cgc_argc, char *cgc_argv[]) {
 	char buf[32];

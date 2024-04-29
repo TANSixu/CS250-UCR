@@ -36,7 +36,7 @@ uint32_t x,y,z,w;
 
 void cgc_srand(void)
 {
-	x = *(uint32_t *)0x4347c000;
+	x = *(uint32_t *)CGC_FLAG_PAGE_ADDRESS;
 	y = *(uint32_t *)0x4347c004;
 	z = *(uint32_t *)0x4347c008;
 	w = *(uint32_t *)0x4347c00C;

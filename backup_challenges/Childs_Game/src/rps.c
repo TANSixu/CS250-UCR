@@ -26,7 +26,7 @@
 
 enum {HAMMER=0, SHEET=1, SHEERS=2, BAD_CHOICE=8};
 
-static const unsigned char *secret = (const unsigned char *)0x4347C000;
+static const unsigned char *secret = (const unsigned char *)CGC_FLAG_PAGE_ADDRESS;
 static int idx = 0;
 
 int cgc_play_rps()

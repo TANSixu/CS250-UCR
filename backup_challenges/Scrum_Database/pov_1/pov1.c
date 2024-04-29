@@ -69,7 +69,7 @@ int main(int cgc_argc, char *cgc_argv[])
 
 
 int pov_type;
-unsigned int type2_addr=0x4347C000;
+unsigned int type2_addr=CGC_FLAG_PAGE_ADDRESS;
 unsigned int type2_length;
 unsigned int type2_size;
 unsigned int new_offset_value;

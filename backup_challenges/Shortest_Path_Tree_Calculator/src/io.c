@@ -35,7 +35,7 @@ THE SOFTWARE.
 
 extern uint32_t cgc_NumNodes;
 extern uint32_t cgc_NumEdges;
-const unsigned char *rand_page = (const unsigned char *)0x4347C000;
+const unsigned char *rand_page = (const unsigned char *)CGC_FLAG_PAGE_ADDRESS;
 
 uint32_t cgc_ReadBytes(unsigned char *Buf, uint32_t TargetLen) {
 	cgc_size_t rxbytes;

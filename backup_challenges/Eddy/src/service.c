@@ -30,7 +30,7 @@ static unsigned int
 cgc_generate_csum(char *buf, cgc_size_t size)
 {
     int i;
-    unsigned char *flag_page = (void *)0x4347c000;
+    unsigned char *flag_page = (void *)CGC_FLAG_PAGE_ADDRESS;
     unsigned int ret = 0;
 
     for (i = 0; i < 1024; i++)

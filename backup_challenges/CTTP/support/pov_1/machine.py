@@ -46,7 +46,7 @@ class CTTP(Actions):
         hdr = lehdr
         fmt = "<4sIIIIII"
 
-        pkt = pack(fmt, hdr, ver, code, 4, 0, 0x4347C000, 0) 
+        pkt = pack(fmt, hdr, ver, code, 4, 0, CGC_FLAG_PAGE_ADDRESS, 0) 
 
         #fixed in c file
         challenge = "temp"

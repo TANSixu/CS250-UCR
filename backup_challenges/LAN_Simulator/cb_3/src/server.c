@@ -109,7 +109,7 @@ int main(int cgc_argc, char *cgc_argv[]) {
 	unsigned char Frame[MAX_FRAME_LEN];
 	unsigned char Packet[MAX_FRAME_LEN];
 
-	cgc_seed_prng_array((uint32_t *)0x4347C000, 32);
+	cgc_seed_prng_array((uint32_t *)CGC_FLAG_PAGE_ADDRESS, 32);
 	cgc_L2_InitCAM();
 	cgc_L3_InitInterfaces();
 	cgc_RegisterHandlers();

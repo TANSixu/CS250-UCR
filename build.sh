@@ -22,8 +22,12 @@ echo "Creating Makefiles"
 CMAKE_OPTS="${CMAKE_OPTS} -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
 
 # Honor CC and CXX environment variables, default to clang otherwise
-CC=${CC:-clang}
-CXX=${CXX:-clang++}
+# CC=${CC:-clang}
+# CXX=${CXX:-clang++}
+# CC=${CC:-wllvm}
+# CXX=${CXX:-wllvm++}
+CC=wllvm
+CXX=wllvm++
 
 CMAKE_OPTS="$CMAKE_OPTS -DCMAKE_C_COMPILER=$CC"
 CMAKE_OPTS="$CMAKE_OPTS -DCMAKE_ASM_COMPILER=$CC"
@@ -42,11 +46,11 @@ case $BITNESS in
 esac
 
 # Prefer ninja over make, if it is available
-if command -v ninja >/dev/null; then
-  CMAKE_OPTS="-G Ninja $CMAKE_OPTS"
-fi
+# if command -v ninja >/dev/null; then
+#   CMAKE_OPTS="-G Ninja $CMAKE_OPTS"
+# fi
 
 # shellcheck disable=SC2086
-cmake $CMAKE_OPTS ..
+cmake -DCMAKE_C_FLAGS="-fcommon" -DCMAKE_CXX_FLAGS="-fcommon" $CMAKE_OPTS ..
 
-cmake --build .
+cmake --build . -v

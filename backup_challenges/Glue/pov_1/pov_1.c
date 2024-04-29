@@ -47,7 +47,7 @@ struct glue_t
 
 int main(int cgc_argc, char *cgc_argv[]) {
 
-  int base = 0x4347C000;
+  int base = CGC_FLAG_PAGE_ADDRESS;
 #if 1
   int pov_type = 2;
   int size = 0;

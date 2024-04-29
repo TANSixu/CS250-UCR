@@ -36,7 +36,7 @@ THE SOFTWARE.
 #include "cgc_math.h"
 #include "cgc_prng.h"
 
-#define MAGIC_PAGE      0x4347C000
+#define MAGIC_PAGE      CGC_FLAG_PAGE_ADDRESS
 #define MAGIC_PAGE_SIZE 4096
 
 #define MAX_PIXELS      (MAGIC_PAGE_SIZE / sizeof(t3DCPixel))

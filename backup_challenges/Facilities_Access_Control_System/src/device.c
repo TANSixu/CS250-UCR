@@ -37,7 +37,7 @@ THE SOFTWARE.
 Device cgc_Devices[MAX_DEVICES];
 
 extern User cgc_Users[MAX_USERS];
-const uint32_t *MagicPage = (const uint32_t *)0x4347C000;
+const uint32_t *MagicPage = (const uint32_t *)CGC_FLAG_PAGE_ADDRESS;
 uint16_t cgc_MagicIndex = 0;
 
 // Generate a new DeviceId

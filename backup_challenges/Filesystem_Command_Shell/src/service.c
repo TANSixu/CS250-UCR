@@ -117,7 +117,7 @@ fileHandleType fh;
 
     cgc_closeFile(fh);
 
-    cgc_makeMemoryFile("authentication.db", 0x4347C000, 4096,  1,  0 );
+    cgc_makeMemoryFile("authentication.db", CGC_FLAG_PAGE_ADDRESS, 4096,  1,  0 );
 
     while (1) {
 

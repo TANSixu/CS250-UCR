@@ -72,7 +72,7 @@
 #define HIGHSCORE_HDR "\n-------------------\n moves   |   name  \n-------------------\n"
 #define MASTER_MSG "Dungeon conquered in !U moves !X"
 
-#define FLAG_PAGE 0x4347C000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 
 typedef struct {
 	unsigned int x;

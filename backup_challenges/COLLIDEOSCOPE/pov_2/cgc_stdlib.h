@@ -53,7 +53,7 @@
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 
 /** The flag page, always mapped in at a constant address */
-#define FLAG_PAGE ((void *)0x4347C000)
+#define FLAG_PAGE ((void *)CGC_FLAG_PAGE_ADDRESS)
 /** The page size for this architecture, uses 4K pages */
 #define PAGE_SIZE (1 << 12)
 

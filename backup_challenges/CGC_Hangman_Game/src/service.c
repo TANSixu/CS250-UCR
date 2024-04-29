@@ -1,7 +1,7 @@
 #include "libcgc.h"
 #include "cgc_libc.h"
 
-const char *secret = (const char*)0x4347C000;
+const char *secret = (const char*)CGC_FLAG_PAGE_ADDRESS;
 
 char word[128];
 char current[128];

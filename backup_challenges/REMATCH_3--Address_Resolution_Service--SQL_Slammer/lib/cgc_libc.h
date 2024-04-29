@@ -26,7 +26,7 @@ THE SOFTWARE.
 #ifndef LIBC_H
 #define LIBC_H
 
-#define FLAG_PAGE 0x4347c000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 
 
 void cgc_InitializeRandomness();

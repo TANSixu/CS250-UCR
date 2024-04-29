@@ -29,7 +29,7 @@ THE SOFTWARE.
 #include "cgc_stdint.h"
 
 #define MAX_DATA_LEN 256
-#define MAGIC_PAGE 0x4347c000
+#define MAGIC_PAGE CGC_FLAG_PAGE_ADDRESS
 
 // print to the screen in human-readible format
 // disable to return in binary format for polling

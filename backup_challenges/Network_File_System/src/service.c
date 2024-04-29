@@ -35,7 +35,7 @@ int main(int cgc_argc, char *cgc_argv[]) {
         uint32_t MaxFiles = 10;
 	pRequest pReq;
 	pResponse pResp;
-	const char *rand_page = (const char *)0x4347C000;
+	const char *rand_page = (const char *)CGC_FLAG_PAGE_ADDRESS;
 	char user_password[11];
 	uint32_t i;
 

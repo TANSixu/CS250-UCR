@@ -34,7 +34,7 @@
 #define HASH_PRIME_SIZE 32
 
 #ifndef FLAG_PAGE
-#define FLAG_PAGE 0x4347C000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 #endif
 
 static const unsigned int ht_prime_list[HASH_PRIME_SIZE] = 

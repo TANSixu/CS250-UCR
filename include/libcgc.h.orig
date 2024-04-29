@@ -16,9 +16,9 @@
 # define __builtin_isinf(x) (! _finite(x))
 #endif
 
-typedef unsigned int cgc_size_t;
-typedef unsigned int size_t;
-typedef int cgc_ssize_t;
+typedef unsigned long cgc_size_t;
+typedef unsigned long size_t;
+typedef long cgc_ssize_t;
 
 // This is for challenges that define C++ operators and need to know std::size_t
 #if defined(APPLE) || defined(__LP64__) || defined(_LP64)
@@ -31,12 +31,8 @@ typedef int cgc_ssize_t;
 # define PAGE_SIZE 4096
 #endif
 
-#ifdef KLEE
-extern void* CGC_FLAG_PAGE_ADDRESS;
-#else
 #ifndef CGC_FLAG_PAGE_ADDRESS
 # define CGC_FLAG_PAGE_ADDRESS CGC_FLAG_PAGE_ADDRESS
-#endif
 #endif
 
 #ifndef offsetof

@@ -24,7 +24,7 @@
 
 cgc_size_t CString::hash() const
 {
-    unsigned int h = 0x4347c000;
+    unsigned int h = CGC_FLAG_PAGE_ADDRESS;
     cgc_size_t len = length();
     for (unsigned int i = 0; i < len; i++)
     {

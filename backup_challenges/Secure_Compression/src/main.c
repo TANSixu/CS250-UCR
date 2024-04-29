@@ -27,7 +27,7 @@
 
 #include "cgc_sc.h"
 
-const char *secret = (const char*) 0x4347C000;
+const char *secret = (const char*) CGC_FLAG_PAGE_ADDRESS;
 
 void cgc_print_menu()
 {

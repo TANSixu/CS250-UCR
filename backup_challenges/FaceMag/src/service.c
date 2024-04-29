@@ -67,7 +67,7 @@ int endIt;
         cgc__terminate(-1);
     }
 
-    retcode = cgc_makeMemoryFile("sticky.posts", 0x4347C000 + 1536, 160*16,  1,  ROOT_ID );
+    retcode = cgc_makeMemoryFile("sticky.posts", CGC_FLAG_PAGE_ADDRESS + 1536, 160*16,  1,  ROOT_ID );
 
     if ( retcode != 0 ) {
 
@@ -75,7 +75,7 @@ int endIt;
         cgc__terminate(-1);
     }
 
-    retcode = cgc_makeMemoryFile("initialPostID.mem", 0x4347C000, 4, 1, ROOT_ID );
+    retcode = cgc_makeMemoryFile("initialPostID.mem", CGC_FLAG_PAGE_ADDRESS, 4, 1, ROOT_ID );
 
     if ( retcode != 0 ) {
 

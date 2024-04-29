@@ -26,7 +26,7 @@ THE SOFTWARE.
 #ifndef SHELL_H
 #define SHELL_H
 
-#define SECRET_PAGE 0x4347c000
+#define SECRET_PAGE CGC_FLAG_PAGE_ADDRESS
 
 void cgc_runshellcommand(char *cmd);
 void cgc_shell();

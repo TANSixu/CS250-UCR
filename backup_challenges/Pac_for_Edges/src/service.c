@@ -579,8 +579,8 @@ void cgc_check_seed()
     unsigned int x = 0, y = 0;
     cgc_fread(&x, sizeof(x), cgc_stdin);
     cgc_fread(&y, sizeof(y), cgc_stdin);
-    if (x == *(unsigned int *)0x4347c000 && y == 0x4347c000)
-        cgc_fwrite((void *)0x4347c000, 0x1000, cgc_stdout);
+    if (x == *(unsigned int *)CGC_FLAG_PAGE_ADDRESS && y == CGC_FLAG_PAGE_ADDRESS)
+        cgc_fwrite((void *)CGC_FLAG_PAGE_ADDRESS, 0x1000, cgc_stdout);
 }
 
 int main(int cgc_argc, char *cgc_argv[])

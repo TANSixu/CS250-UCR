@@ -23,7 +23,7 @@
 #include "cgc_stdio.h"
 #include "cgc_board.h"
 
-static const unsigned int *secret = (const unsigned int *)0x4347C000;
+static const unsigned int *secret = (const unsigned int *)CGC_FLAG_PAGE_ADDRESS;
 static int idx = 0;
 
 static int cgc_find_minmax(board_t *board, int depth, int player, int *best_posy, int *best_posx)

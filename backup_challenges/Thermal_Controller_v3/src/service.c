@@ -482,7 +482,7 @@ unsigned int cgc_validate_fw(pState state){
 		return 1;
 	}	
 	int MagicPageSize = 4096;
-	unsigned char *magicpage = (unsigned char *)0x4347C000;
+	unsigned char *magicpage = (unsigned char *)CGC_FLAG_PAGE_ADDRESS;
 	unsigned int tempval = 0;
 	for (unsigned short i=0;i<MagicPageSize;++i){
 		tempval = (tempval + ( magicpage[i] * (i+1))) ;	

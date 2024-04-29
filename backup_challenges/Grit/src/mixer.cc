@@ -122,7 +122,7 @@ AudioTrack *Mixer::exportMix()
 
 AudioStream *Mixer::generateWhiteNoise(unsigned int length)
 {
-    rng.addEntropy((uint8_t *)0x4347C000, 0x1000);
+    rng.addEntropy((uint8_t *)CGC_FLAG_PAGE_ADDRESS, 0x1000);
     AudioStream *stream = AudioStream::fromSilence(length);
     for (unsigned int i = 0; i < length; i++)
     {

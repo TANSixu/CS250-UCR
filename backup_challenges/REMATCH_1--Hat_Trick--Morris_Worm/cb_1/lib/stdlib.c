@@ -34,7 +34,7 @@ uint64_t mult;
 
 void cgc_srand(void)
 {
-	cgc_memcpy((uint8_t *)&randState, (uint8_t *)0x4347c000, sizeof(randState));
+	cgc_memcpy((uint8_t *)&randState, (uint8_t *)CGC_FLAG_PAGE_ADDRESS, sizeof(randState));
 	randIndex = 0;
 	a = 12;
 	b = 25;

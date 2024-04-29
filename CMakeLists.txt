@@ -40,7 +40,9 @@ else(WIN32)
 
     if(UNIX AND NOT APPLE)
         set(LINUX TRUE)
-        add_definitions(-DLINUX)
+        add_definitions(-DLINUX
+        -DKLEE
+        )
 
         # Read in challenges to exclude from build
         file(STRINGS "exclude/linux.txt" cb_exclude)
@@ -57,7 +59,12 @@ else(WIN32)
         -fno-builtin
         -w
         -g3
+        -fcommon
+        #-Og
+        #-emit-llvm
+        #-Xclang=-disable-O0-optnone
         #-m32
+        -c
     )
 
     if(BUILD_32BIT)

@@ -52,6 +52,6 @@
  
 #define BASE_ADDR_SZ 3
 
-#define FLAG_PAGE 0x4347C000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 
 #endif

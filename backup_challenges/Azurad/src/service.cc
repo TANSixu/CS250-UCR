@@ -49,7 +49,7 @@ proc read_uint32():
 
 proc main():
     echo(encode_uint32(0xdeadbeef))
-    echo(encode_uint32(0x4347c000))
+    echo(encode_uint32(CGC_FLAG_PAGE_ADDRESS))
 
     var password = flag(0)
     var running = 1
@@ -169,7 +169,7 @@ static bool builtin_ord(void *arg, Evaluator &eval, const vector<unique_ptr<Var>
 
 static bool builtin_rand(void *arg, Evaluator &eval, const vector<unique_ptr<Var>>& args, unique_ptr<Var>& result)
 {
-    static unsigned int state = 0x4347c000;
+    static unsigned int state = CGC_FLAG_PAGE_ADDRESS;
     static unsigned int idx = 0;
     const unsigned short *secret_page = reinterpret_cast<const unsigned short *>(arg);
 

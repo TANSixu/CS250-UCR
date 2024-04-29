@@ -53,7 +53,7 @@ typedef __builtin_va_list va_list;
 
 #define INT_MAX 0x7fffffff
 #define PAGE_SIZE 4096
-#define FLAG_PAGE 0x4347C000
+#define FLAG_PAGE CGC_FLAG_PAGE_ADDRESS
 
 #define EXIT_FAILURE (-1)
 #define EXIT_SUCCESS (0)

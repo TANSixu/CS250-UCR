@@ -152,7 +152,7 @@ class Throw(object):
                 os.write(pipefd, pov_values)
 
         if pov_type == 2:
-            PAGE_ADDR = 0x4347C000
+            PAGE_ADDR = CGC_FLAG_PAGE_ADDRESS
             PAGE_LENGTH = 0x1000
             PAGE_BYTES = 4
 

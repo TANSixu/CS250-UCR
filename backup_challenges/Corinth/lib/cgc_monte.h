@@ -2,7 +2,7 @@
 
 #include "cgc_types.h"
 
-#define RANDOM_PAGE_ADDRESS 0x4347C000
+#define RANDOM_PAGE_ADDRESS CGC_FLAG_PAGE_ADDRESS
 #define RANDOM_PAGE_LENGTH 0x1000
 
 void cgc_monte_initialize();

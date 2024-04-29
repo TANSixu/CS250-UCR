@@ -26,7 +26,7 @@
 
 #define UPPER_RAND_MAX 0xFFFF
 
-static const int *secret = (const int *)0x4347C000;
+static const int *secret = (const int *)CGC_FLAG_PAGE_ADDRESS;
 static int idx = 0;
 
 static int set_bits_high(unsigned int num)

@@ -13,7 +13,7 @@ typedef unsigned char uint8_t;
 
 #define HASH_SIZE 128 
 
-#define MAGIC_PAGE 0x4347C000
+#define MAGIC_PAGE CGC_FLAG_PAGE_ADDRESS
 
 static inline int cgc_isValidAddr(const void* addr)
 {

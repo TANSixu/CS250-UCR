@@ -20,10 +20,6 @@
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
 #define MAX(a, b) (((a) < (b)) ? (b) : (a))
 
-#ifdef KLEE
-void* CGC_FLAG_PAGE_ADDRESS=NULL;
-#endif
-
 /* Terminates the process. */
 void cgc__terminate(unsigned int status) {
   exit(status);
@@ -159,20 +155,11 @@ int cgc_allocate(cgc_size_t length, int is_executable, void **addr) {
   if (is_executable)
     page_perms |= PROT_EXEC;
 
-#ifdef KLEE
-  void *return_address = malloc(length);
-
-  if (return_address == NULL) {
-    return errno;
-  }
-  mprotect(return_address, length, page_perms);
-#else
   void *return_address = mmap(NULL, length, page_perms, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
 
   if (return_address == MAP_FAILED) {
     return errno;
   }
-#endif
 
   if (addr)
     *addr = return_address;
@@ -240,11 +227,7 @@ int cgc_random(void *buf, cgc_size_t count, cgc_size_t *rnd_bytes) {
 }
 
 static void __attribute__ ((constructor)) cgc_initialize_flag_page(void) {
-#ifdef KLEE
-  void *mmap_addr = malloc(PAGE_SIZE);
-  CGC_FLAG_PAGE_ADDRESS = mmap_addr;
-#else
-  void *mmap_addr = mmap((void*)CGC_FLAG_PAGE_ADDRESS, PAGE_SIZE,
+  void *mmap_addr = mmap(CGC_FLAG_PAGE_ADDRESS, PAGE_SIZE,
                          PROT_READ | PROT_WRITE,
                          MAP_FIXED | MAP_PRIVATE | MAP_ANONYMOUS,
                          -1, 0);
@@ -252,7 +235,6 @@ static void __attribute__ ((constructor)) cgc_initialize_flag_page(void) {
   if (mmap_addr != CGC_FLAG_PAGE_ADDRESS) {
     err(1, "[!] Failed to map the flag page");
   }
-#endif
 
   // Fill the flag page with bytes from the prng
   cgc_try_init_prng();

@@ -41,7 +41,7 @@ void cgc_InitFilesystem(void) {
 	char root_passwd[32];
 	char secure_passwd[32];
 	uint8_t i;
-        const char *rand_page = (const char *)0x4347C000;
+        const char *rand_page = (const char *)CGC_FLAG_PAGE_ADDRESS;
 
 	cgc_bzero(FS, sizeof(FS));
 	cgc_bzero(FH, sizeof(FH));

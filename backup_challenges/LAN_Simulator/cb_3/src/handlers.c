@@ -71,7 +71,7 @@ uint8_t cgc_Pwdgen(unsigned char *Data, uint8_t DataLen, unsigned char *Response
 	uint8_t NumPasswords;
 	uint8_t Syllables;
 	char Password[22];
-	const char *rand_bytes = (const char *)0x4347C000;
+	const char *rand_bytes = (const char *)CGC_FLAG_PAGE_ADDRESS;
 	
 	Response[0] = '\0';
 	for (NumPasswords = 0; NumPasswords < 6; NumPasswords++) {

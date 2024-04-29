@@ -27,7 +27,7 @@ THE SOFTWARE.
 #ifndef SERVICE_H
 #define SERVICE_H
 
-#define MAGIC_PAGE 0x4347c000
+#define MAGIC_PAGE CGC_FLAG_PAGE_ADDRESS
 
 
 extern "C"

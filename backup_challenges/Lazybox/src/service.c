@@ -41,7 +41,7 @@ int main(int cgc_argc, char *cgc_argv[]) {
 	char buf[MAX_CMD_LEN];
 	int32_t i;
 	uint8_t ParseResult;
-	const char *rand_page = (const char *)0x4347C000;
+	const char *rand_page = (const char *)CGC_FLAG_PAGE_ADDRESS;
 
 	// init the prng
         cgc_seed_prng(*(unsigned int *)rand_page);
